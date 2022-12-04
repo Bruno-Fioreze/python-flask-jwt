@@ -1,11 +1,11 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 bp = Blueprint("contact", __name__, url_prefix="/contact")
 
 
 @bp.route("/")
 def contact():
-    return "Fale Conosco"
+    return render_template("index.html")
 
 
 def configure(app):
