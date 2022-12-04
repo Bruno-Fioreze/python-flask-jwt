@@ -1,5 +1,12 @@
 # Flask
 
+# dependências
+
+Python
+Flask
+Gunicorn
+
+
 # Comandos Flask
 
 > export FLASK_APP=app:create_app
