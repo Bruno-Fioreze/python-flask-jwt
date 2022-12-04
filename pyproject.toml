@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python-flask-jwt"
+version = "0.1.0"
+description = ""
+authors = ["Bruno Fioreze"]
+readme = "README.md"
+packages = [{include = "python_flask_jwt"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.2"
+gunicorn = "^20.1.0"
+pre-commit = "^2.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
