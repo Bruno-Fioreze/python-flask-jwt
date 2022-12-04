@@ -182,6 +182,37 @@ testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8 (<5)", "flake8-202
 testing-integration = ["build[virtualenv]", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
 
 [[package]]
+name = "tinydb"
+version = "4.7.0"
+description = "TinyDB is a tiny, document oriented database optimized for your happiness :)"
+category = "main"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[[package]]
+name = "tinydb-serialization"
+version = "2.1.0"
+description = "Serialization for objects that TinyDB otherwise couldn't handle"
+category = "main"
+optional = false
+python-versions = ">=3.5,<4.0"
+
+[package.dependencies]
+tinydb = ">=4.0,<5.0"
+
+[[package]]
+name = "tinymongo"
+version = "0.2.0"
+description = "A flat file drop in replacement for mongodb.  Requires Tinydb"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+tinydb = ">=3.2.1"
+tinydb-serialization = ">=1.0.4"
+
+[[package]]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -223,7 +254,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "5447aa6d1910fd5353771392b8920c9413f535676614b4dc0d2c369e51721427"
+content-hash = "2015f870f9185f748650d23447d3e345a29ed7d057a277e233470069c0b02d37"
 
 [metadata.files]
 cfgv = [
@@ -358,6 +389,18 @@ PyYAML = [
 setuptools = [
     {file = "setuptools-65.6.3-py3-none-any.whl", hash = "sha256:57f6f22bde4e042978bcd50176fdb381d7c21a9efa4041202288d3737a0c6a54"},
     {file = "setuptools-65.6.3.tar.gz", hash = "sha256:a7620757bf984b58deaf32fc8a4577a9bbc0850cf92c20e1ce41c38c19e5fb75"},
+]
+tinydb = [
+    {file = "tinydb-4.7.0-py3-none-any.whl", hash = "sha256:e2cdf6e2dad49813e9b5fceb3c7943387309a8738125fbff0b58d248a033f7a9"},
+    {file = "tinydb-4.7.0.tar.gz", hash = "sha256:357eb7383dee6915f17b00596ec6dd2a890f3117bf52be28a4c516aeee581100"},
+]
+tinydb-serialization = [
+    {file = "tinydb-serialization-2.1.0.tar.gz", hash = "sha256:13365c8a1a11452c925b160a6ea3996ac41dc42c37a80ec9fc8d8ee0609992e8"},
+    {file = "tinydb_serialization-2.1.0-py3-none-any.whl", hash = "sha256:cfd0824a6afd0a56cb7d6b3c09807981d38c349500ba239d651a5b4d2f906f5c"},
+]
+tinymongo = [
+    {file = "tinymongo-0.2.0-py2-none-any.whl", hash = "sha256:1bbbb8784386ea0ab079cab66b6b182390d9c825ca33b1abce4a375cccb828cf"},
+    {file = "tinymongo-0.2.0.tar.gz", hash = "sha256:733de042ec6fcaf2630bfd76761be1c084f503ceff1c05621c7be47481d86ba3"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
